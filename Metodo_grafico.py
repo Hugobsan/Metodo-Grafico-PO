@@ -81,7 +81,7 @@ def testeOtimalidade():
     #verifica se o penultimo é maior que último ponto em z
     if(pontoAtual.calculaZ() > pontoVizinho.calculaZ()):
         print("O ponto",pontoAtual.__str__(),"é ponto ótimo, e tem como valor ótimo Z =", pontoAtual.calculaZ())
-        input("Pressione qualquer tecla para sair...")
+        input("Pressione ENTER para sair...")
         return pontoAtual
     else:
         print("O ponto vizinho", pontoVizinho.__str__(),"é melhor que o ponto atual", pontoAtual.__str__())
