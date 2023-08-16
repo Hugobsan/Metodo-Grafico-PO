@@ -35,15 +35,16 @@ def intersec(e1, e2):
     return p
 
 # Teste de crescimento
-def testeCrescimento(z):
+def testeCrescimento():
     print("\n")
     print("-- TESTE DE CRESCIMENTO --")
     print("Este teste verifica se, partindo da origem, o próximo ponto corta x1 (horizontal) ou x2 (vertical)")
     print("\n")
 
+    print("Z =", z.a, "x +", z.b, "y")
     #se a for maior que b o próximo ponto corta r1 e x1
     if(z.a > z.b):
-        print("O próximo ponto corta x1!")
+        print(z.a,">",z.b,"logo, o próximo ponto corta x1!")
         print("Digite a equação da reta que corta o x1 dentro da área viável, no formato ax + by = c")
         a = int(input("Digite o valor de a: "))
         b = int(input("Digite o valor de b: "))
@@ -54,7 +55,7 @@ def testeCrescimento(z):
 
         p = intersec(x1, r1)
     else: #se não, corta r3 e x2
-        print("O próximo ponto corta x2!")
+        print(z.b,">",z.a,"logo, opróximo ponto corta x2!")
         print("Digite a equação da reta que corta o x2 dentro da área viável, no formato ax + by = c")
         a = int(input("Digite o valor de a: "))
         b = int(input("Digite o valor de b: "))
@@ -130,7 +131,7 @@ vec_p.append(Origem)
 print("Definindo ponto de origem:", Origem.__str__())
 
 # Realizando teste de crescimento
-p = testeCrescimento(z)
+p = testeCrescimento()
 vec_p.append(p)
 print("\n")
 print("Ponto atual:", vec_p[-1].__str__())
