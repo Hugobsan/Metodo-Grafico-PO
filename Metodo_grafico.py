@@ -35,7 +35,7 @@ def intersec(e1, e2):
     return p
 
 # Teste de crescimento
-def testeCrecimento(z):
+def testeCrescimento(z):
     print("\n")
     print("-- TESTE DE CRESCIMENTO --")
     print("Este teste verifica se, partindo da origem, o próximo ponto corta x1 (horizontal) ou x2 (vertical)")
@@ -130,7 +130,7 @@ vec_p.append(Origem)
 print("Definindo ponto de origem:", Origem.__str__())
 
 # Realizando teste de crescimento
-p = testeCrecimento(z)
+p = testeCrescimento(z)
 vec_p.append(p)
 print("\n")
 print("Ponto atual:", vec_p[-1].__str__())
