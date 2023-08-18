@@ -51,7 +51,7 @@ def testeCrescimento():
         c = int(input("Digite o valor de c: "))
         r1 = Equacao(a,b,c)
 
-        print("Reta adicionada:", r1.__str__())
+        print("Reta adicionada:", r1)
 
         p = intersec(x1, r1)
     else: #se não, corta r3 e x2
@@ -62,7 +62,7 @@ def testeCrescimento():
         c = int(input("Digite o valor de c: "))
         r2 = Equacao(a,b,c)
 
-        print("Reta adicionada:", r2.__str__())
+        print("Reta adicionada:", r2)
 
         p = intersec(x2, r2)
 
@@ -75,17 +75,17 @@ def testeOtimalidade():
 
     print("\n")
     print("-- TESTE DE OTIMALIDADE --")
-    print("Este teste verifica se o ponto atual",pontoAtual.__str__(),"é ótimo, ou se o ponto vizinho é melhor que o ponto atual")
+    print("Este teste verifica se o ponto atual",pontoAtual,"é ótimo, ou se o ponto vizinho é melhor que o ponto atual")
     print("\n")
 
     #verifica se o penultimo é maior que último ponto em z
     if(pontoAtual.calculaZ() > pontoVizinho.calculaZ()):
-        print("O ponto",pontoAtual.__str__(),"é ponto ótimo, e tem como valor ótimo Z =", pontoAtual.calculaZ())
+        print("O ponto",pontoAtual,"é ponto ótimo, e tem como valor ótimo Z =", pontoAtual.calculaZ())
         input("Pressione ENTER para sair...")
         return pontoAtual
     else:
-        print("O ponto vizinho", pontoVizinho.__str__(),"é melhor que o ponto atual", pontoAtual.__str__())
-        print("Novo ponto atual:", pontoVizinho.__str__())
+        print("O ponto vizinho", pontoVizinho,"é melhor que o ponto atual", pontoAtual)
+        print("Novo ponto atual:", pontoVizinho)
         add_vizinho()
         testeOtimalidade()
         return pontoVizinho
@@ -95,17 +95,17 @@ def add_vizinho():
     global vec_p
     #solicitando equação que corta a reta eq2 do ponto atual
     print("\n")
-    print("Adicionando vizinho do ponto", vec_p[-1].__str__())
-    print("Digite a equação da reta que corta a reta", vec_p[-1].eq2.__str__(), "dentro da área viável, no formato ax + by = c")
+    print("-- Adicionando vizinho do ponto", vec_p[-1],"--")
+    print("Digite a equação da reta que corta a reta", vec_p[-1].eq2, "dentro da área viável, no formato ax + by = c")
     a = int(input("Digite o valor de a: "))
     b = int(input("Digite o valor de b: "))
     c = int(input("Digite o valor de c: "))
     eq_v = Equacao(a,b,c)
-    print("Reta adicionada:", eq_v.__str__())
+    print("Reta adicionada:", eq_v)
     print("\n")
     v = intersec(vec_p[-1].eq2, eq_v)
     vec_p.append(v)
-    print("Vizinho adicionado:", v.__str__())
+    print("Vizinho adicionado:", v)
 
 #histórico de pontos
 vec_p = []
@@ -129,13 +129,13 @@ print("\n")
 # Definindo origem
 Origem = intersec(x1, x2)
 vec_p.append(Origem)
-print("Definindo ponto de origem:", Origem.__str__())
+print("Definindo ponto de origem:", Origem)
 
 # Realizando teste de crescimento
 p = testeCrescimento()
 vec_p.append(p)
 print("\n")
-print("Ponto atual:", vec_p[-1].__str__())
+print("Ponto atual:", vec_p[-1])
 
 # Adicionando vizinho 1
 add_vizinho()
