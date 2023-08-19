@@ -115,7 +115,7 @@ x1 = Equacao(0,1,0)
 x2 = Equacao(1,0,0)
 
 print("\n")
-print("---- Método Gráfico - Pesquisa Operacional ----")
+print("---- Método Geométrico - Pesquisa Operacional ----")
 print("\n")
 
 #definindo equação de Z
