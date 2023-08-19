@@ -1,2 +1,2 @@
-# Metodo-Grafico-PO
-Algoritmo que implementa o método gráfico de resolução de problemas de programação linear e pesquisa operacional
+# Pesquisa Operacional - Métodos de Otimização de Problemas
+Repositório com algoritmos que implementam diferentes métodos de maximização e resolução de problemas da programação linear e pesquisa operacional.
